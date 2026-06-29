@@ -19,10 +19,12 @@ export default function About() {
             {/* Main Image */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
               <Image
-                src="https://images.unsplash.com/photo-1553028826-f4804a6dba3b?auto=format&fit=crop&w=900&q=85"
-                alt="AlphaSchutz Beratungsgespräch"
+                src="/about-office-team-v3.png"
+                alt="Besprechung im Büro mit mehreren Fachpersonen in Anzügen"
                 fill
+                sizes="(min-width: 1024px) 42vw, 100vw"
                 className="object-cover"
+                quality={95}
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0f2044]/40 to-transparent" />

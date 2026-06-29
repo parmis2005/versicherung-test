@@ -7,12 +7,13 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=3200&q=90"
           alt="Modernes Bürogebäude"
           fill
           priority
+          sizes="100vw"
           className="object-cover object-center"
-          quality={90}
+          quality={95}
         />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0f2044]/92 via-[#0f2044]/80 to-[#091428]/95" />
