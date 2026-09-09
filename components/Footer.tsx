@@ -28,12 +28,12 @@ export default function Footer() {
   return (
     <footer className="bg-[#091428] text-white">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-10 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             {/* Logo */}
-            <div className="flex items-center gap-2.5 mb-5">
+            <div className="flex items-center gap-2.5 mb-3 sm:mb-5">
               <div className="w-9 h-9 rounded-lg bg-[#c9a84c] flex items-center justify-center">
                 <Shield className="w-5 h-5 text-white" />
               </div>
@@ -42,7 +42,7 @@ export default function Footer() {
               </span>
             </div>
 
-            <p className="text-white/55 text-sm leading-relaxed mb-6">
+            <p className="text-white/55 text-sm leading-relaxed mb-4 sm:mb-6">
               Ihr unabhängiger Versicherungsberater seit 1999. Wir schützen, was Ihnen wichtig ist
               – mit Transparenz, Kompetenz und Leidenschaft.
             </p>
@@ -68,10 +68,10 @@ export default function Footer() {
 
           {/* Services Column */}
           <div>
-            <h4 className="font-semibold text-white text-sm uppercase tracking-wide mb-5">
+            <h4 className="font-semibold text-white text-sm uppercase tracking-wide mb-3 sm:mb-5">
               Leistungen
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1.5 sm:space-y-2.5">
               {services.map((service) => (
                 <li key={service}>
                   <a
@@ -87,10 +87,10 @@ export default function Footer() {
 
           {/* Company Column */}
           <div>
-            <h4 className="font-semibold text-white text-sm uppercase tracking-wide mb-5">
+            <h4 className="font-semibold text-white text-sm uppercase tracking-wide mb-3 sm:mb-5">
               Unternehmen
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1.5 sm:space-y-2.5">
               {company.map((item) => (
                 <li key={item.label}>
                   <a
@@ -106,10 +106,10 @@ export default function Footer() {
 
           {/* Contact Column */}
           <div>
-            <h4 className="font-semibold text-white text-sm uppercase tracking-wide mb-5">
+            <h4 className="font-semibold text-white text-sm uppercase tracking-wide mb-3 sm:mb-5">
               Kontakt
             </h4>
-            <div className="space-y-4">
+            <div className="space-y-2.5 sm:space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#c9a84c] flex-shrink-0 mt-0.5" />
                 <p className="text-white/55 text-sm leading-relaxed">
@@ -134,7 +134,7 @@ export default function Footer() {
             {/* CTA */}
             <a
               href="#kontakt"
-              className="inline-block mt-6 bg-[#c9a84c] hover:bg-[#b8943a] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
+              className="inline-block mt-4 sm:mt-6 bg-[#c9a84c] hover:bg-[#b8943a] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
             >
               Jetzt beraten lassen
             </a>
@@ -144,11 +144,11 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/8">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/35 text-xs">
+        <div className="max-w-7xl mx-auto px-6 py-4 sm:py-5 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+          <p className="text-white/35 text-xs text-center sm:text-left">
             © {new Date().getFullYear()} AlphaSchutz Versicherungsberatung GmbH. Alle Rechte vorbehalten.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
             {legal.map((item) => (
               <a
                 key={item.label}
