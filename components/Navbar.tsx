@@ -24,28 +24,28 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
         scrolled
-          ? "bg-[#0f2044] shadow-2xl py-4"
-          : "bg-transparent py-8"
+          ? "bg-[#0f2044] shadow-2xl py-3"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="relative max-w-[100rem] mx-auto px-6 lg:pl-12 lg:pr-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-11 h-11 rounded-lg bg-[#c9a84c] flex items-center justify-center group-hover:bg-[#b8943a] transition-colors">
-            <Shield className="w-6 h-6 text-white" />
+          <div className="w-9 h-9 rounded-lg bg-[#c9a84c] flex items-center justify-center group-hover:bg-[#b8943a] transition-colors">
+            <Shield className="w-5 h-5 text-white" />
           </div>
-          <span className="text-white font-bold text-2xl tracking-tight">
+          <span className="text-white font-bold text-xl tracking-tight">
             Alpha<span className="text-[#c9a84c]">Schutz</span>
           </span>
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-6 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="hidden lg:flex items-center gap-5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-white/85 hover:text-[#c9a84c] transition-colors text-lg font-medium tracking-wide"
+              className="text-white/85 hover:text-[#c9a84c] transition-colors text-base font-medium tracking-wide"
             >
               {link.label}
             </a>
@@ -56,14 +56,14 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-6">
           <a
             href="tel:+492116123456"
-            className="flex items-center gap-2 text-white/75 hover:text-white text-base transition-colors"
+            className="flex items-center gap-2 text-white/75 hover:text-white text-sm transition-colors"
           >
             <Phone className="w-4 h-4" />
             +49 211 612 34 56
           </a>
           <a
             href="#kontakt"
-            className="bg-[#c9a84c] hover:bg-[#b8943a] text-white px-6 py-3 rounded-lg text-base font-semibold transition-all shadow-lg shadow-[#c9a84c]/20 hover:shadow-[#c9a84c]/30"
+            className="bg-[#c9a84c] hover:bg-[#b8943a] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-lg shadow-[#c9a84c]/20 hover:shadow-[#c9a84c]/30"
           >
             Jetzt beraten lassen
           </a>
