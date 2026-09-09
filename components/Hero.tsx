@@ -25,7 +25,7 @@ export default function Hero() {
           className="text-white font-semibold uppercase leading-[1.15] sm:leading-[1.1] mb-3 sm:mb-6 max-w-5xl"
           style={{
             fontFamily: "var(--font-cormorant), var(--font-playfair), Georgia, serif",
-            fontSize: "clamp(0.95rem, 4.2vw, 4.6rem)",
+            fontSize: "clamp(1.4rem, 4.2vw, 4.6rem)",
           }}
         >
           Ihr Schutz ist unser <span className="text-[#c9a84c]">Versprechen</span>
