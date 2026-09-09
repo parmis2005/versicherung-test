@@ -55,12 +55,12 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="leistungen" className="py-24 bg-[#f8f9fc]">
+    <section id="leistungen" className="py-24 luxury-surface">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block">
-            <span className="text-[#c9a84c] text-sm font-semibold uppercase tracking-widest mb-3 block">
+            <span className="luxury-eyebrow text-sm font-semibold uppercase mb-3 block">
               Unsere Leistungen
             </span>
             <div className="w-12 h-0.5 bg-[#c9a84c] mx-auto mb-4" />
@@ -86,11 +86,11 @@ export default function Services() {
             return (
               <div
                 key={service.title}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-[#c9a84c]/20 cursor-pointer"
+                className="bg-white/88 rounded-xl p-8 luxury-card hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 group cursor-pointer"
               >
                 {/* Icon */}
-                <div className="w-14 h-14 rounded-2xl bg-[#0f2044]/5 group-hover:bg-[#0f2044] flex items-center justify-center mb-6 transition-all duration-300">
-                  <Icon className="w-7 h-7 text-[#c9a84c] group-hover:text-[#c9a84c]" />
+                <div className="w-14 h-14 rounded-xl bg-[#0f2044] group-hover:bg-[#c9a84c] flex items-center justify-center mb-6 transition-all duration-300">
+                  <Icon className="w-7 h-7 text-[#c9a84c] group-hover:text-[#0f2044]" />
                 </div>
 
                 {/* Content */}
@@ -107,7 +107,7 @@ export default function Services() {
                 {/* CTA Link */}
                 <a
                   href={service.href}
-                  className="inline-flex items-center gap-2 text-[#c9a84c] text-sm font-semibold hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-[#b7953c] text-sm font-semibold hover:gap-3 transition-all"
                 >
                   Mehr erfahren
                   <ArrowRight className="w-4 h-4" />
@@ -124,7 +124,7 @@ export default function Services() {
           </p>
           <a
             href="#kontakt"
-            className="inline-flex items-center gap-2 bg-[#0f2044] hover:bg-[#1a3a6e] text-white font-semibold px-8 py-4 rounded-xl transition-all group"
+            className="inline-flex items-center gap-2 bg-[#0f2044] hover:bg-[#091428] text-white font-semibold px-8 py-4 rounded-xl transition-all group shadow-xl shadow-[#0f2044]/15"
           >
             Alle Leistungen besprechen
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

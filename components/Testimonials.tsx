@@ -52,12 +52,21 @@ const testimonials = [
 ];
 
 const avatarColors = [
-  "bg-[#0f2044]",
-  "bg-[#1a3a6e]",
-  "bg-[#c9a84c]",
-  "bg-[#2d5a8e]",
-  "bg-[#0f2044]",
-  "bg-[#1a3a6e]",
+  "from-[#0f2044] to-[#2563a8]",
+  "from-[#143f7a] to-[#2f6fa8]",
+  "from-[#c9a84c] to-[#e1bf65]",
+  "from-[#2d5a8e] to-[#37a0a2]",
+  "from-[#0f2044] to-[#5a4b9f]",
+  "from-[#16406b] to-[#c9a84c]",
+];
+
+const categoryColors = [
+  "bg-[#eaf2ff] text-[#143f7a]",
+  "bg-[#edf7f6] text-[#126164]",
+  "bg-[#fff3d2] text-[#765414]",
+  "bg-[#eef4ff] text-[#2d5a8e]",
+  "bg-[#f0edff] text-[#4b3b86]",
+  "bg-[#fff0e4] text-[#8a4a16]",
 ];
 
 export default function Testimonials() {
@@ -66,7 +75,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-[#c9a84c] text-sm font-semibold uppercase tracking-widest block mb-3">
+          <span className="luxury-eyebrow text-sm font-semibold uppercase block mb-3">
             Kundenstimmen
           </span>
           <div className="w-12 h-0.5 bg-[#c9a84c] mx-auto mb-6" />
@@ -79,7 +88,7 @@ export default function Testimonials() {
             <span className="text-[#c9a84c]">zufriedenen Kunden</span>
           </h2>
           {/* Aggregate Rating */}
-          <div className="flex items-center justify-center gap-3 mt-4">
+          <div className="inline-flex flex-wrap items-center justify-center gap-3 mt-4 bg-white/85 px-5 py-3 rounded-full shadow-lg shadow-[#0f2044]/8 border border-[#c9a84c]/20">
             <div className="flex">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-5 h-5 text-[#c9a84c] fill-[#c9a84c]" />
@@ -95,27 +104,29 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="bg-[#f8f9fc] rounded-2xl p-7 hover:shadow-lg transition-all duration-300 border border-gray-100 relative"
+              className="group bg-white/88 rounded-xl p-7 luxury-card hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#0f2044]/12 transition-all duration-300 relative overflow-hidden"
             >
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#c9a84c] via-[#e3c875] to-[#0f2044]" />
+
               {/* Quote Icon */}
-              <Quote className="w-8 h-8 text-[#c9a84c]/25 mb-4" />
+              <Quote className="w-8 h-8 text-[#c9a84c]/35 mb-4 relative" />
 
               {/* Stars */}
-              <div className="flex gap-0.5 mb-4">
+              <div className="flex gap-0.5 mb-4 relative">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-[#c9a84c] fill-[#c9a84c]" />
+                  <Star key={i} className="w-4 h-4 text-[#d1a73d] fill-[#d1a73d]" />
                 ))}
               </div>
 
               {/* Text */}
-              <p className="text-gray-600 text-sm leading-relaxed mb-6 italic">
+              <p className="text-[#405064] text-sm leading-relaxed mb-6 italic relative">
                 &ldquo;{testimonial.text}&rdquo;
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
+              <div className="flex items-center gap-3 pt-4 border-t border-[#dfe7f0] relative">
                 <div
-                  className={`w-10 h-10 rounded-full ${avatarColors[index]} flex items-center justify-center flex-shrink-0`}
+                  className={`w-10 h-10 rounded-full bg-gradient-to-br ${avatarColors[index]} flex items-center justify-center flex-shrink-0 shadow-lg shadow-[#0f2044]/15`}
                 >
                   <span className="text-white text-xs font-bold">{testimonial.initials}</span>
                 </div>
@@ -123,7 +134,7 @@ export default function Testimonials() {
                   <p className="text-[#0f2044] font-semibold text-sm">{testimonial.name}</p>
                   <p className="text-gray-400 text-xs">{testimonial.location}</p>
                 </div>
-                <span className="ml-auto bg-[#0f2044]/6 text-[#0f2044] text-xs px-2.5 py-1 rounded-full font-medium">
+                <span className={`ml-auto text-xs px-2.5 py-1 rounded-full font-semibold ${categoryColors[index]}`}>
                   {testimonial.category}
                 </span>
               </div>

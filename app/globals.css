@@ -16,6 +16,25 @@ body {
   font-family: var(--font-inter), 'Inter', Arial, sans-serif;
 }
 
+::selection {
+  background: #c9a84c;
+  color: #091428;
+}
+
+.luxury-surface {
+  background: #ffffff;
+}
+
+.luxury-card {
+  border: 1px solid rgb(201 168 76 / 0.18);
+  box-shadow: 0 24px 70px rgb(15 32 68 / 0.08);
+}
+
+.luxury-eyebrow {
+  color: #b7953c;
+  letter-spacing: 0.18em;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -37,6 +56,57 @@ body {
   to { opacity: 1; transform: scale(1); }
 }
 
+@keyframes processFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes processGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.75);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes processBadgePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 24px rgb(201 168 76 / 0.22);
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 14px 34px rgb(201 168 76 / 0.42);
+  }
+}
+
+@keyframes processLineFlow {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translateX(110%);
+  }
+}
+
+@keyframes processStepIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.75s ease forwards;
 }
@@ -50,6 +120,44 @@ body {
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
+
+.process-step {
+  animation: processStepIn 0.7s ease both;
+}
+
+.process-icon {
+  animation: processFloat 3.8s ease-in-out infinite;
+}
+
+.process-icon-glow {
+  position: absolute;
+  inset: -10px;
+  border-radius: 1.35rem;
+  background: radial-gradient(circle, rgb(201 168 76 / 0.32), transparent 66%);
+  animation: processGlow 2.8s ease-in-out infinite;
+}
+
+.process-step-badge {
+  animation: processBadgePulse 2.8s ease-in-out infinite;
+}
+
+.process-line-flow {
+  display: block;
+  width: 32%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+  animation: processLineFlow 3.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-step,
+  .process-icon,
+  .process-icon-glow,
+  .process-step-badge,
+  .process-line-flow {
+    animation: none;
+  }
+}
 
 .section-title {
   font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;

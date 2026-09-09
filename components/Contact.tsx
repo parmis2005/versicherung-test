@@ -40,11 +40,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="kontakt" className="py-24 bg-[#f8f9fc]">
+    <section id="kontakt" className="py-24 luxury-surface">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-[#c9a84c] text-sm font-semibold uppercase tracking-widest block mb-3">
+          <span className="luxury-eyebrow text-sm font-semibold uppercase block mb-3">
             Kontakt
           </span>
           <div className="w-12 h-0.5 bg-[#c9a84c] mx-auto mb-6" />
@@ -64,10 +64,8 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Info */}
           <div>
-            <div className="bg-[#0f2044] rounded-3xl p-10 text-white mb-6 relative overflow-hidden">
-              {/* Decorative circles */}
-              <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-[#c9a84c]/10" />
-              <div className="absolute -bottom-12 -left-12 w-36 h-36 rounded-full bg-[#c9a84c]/8" />
+            <div className="bg-[#0f2044] rounded-xl p-10 text-white mb-6 relative overflow-hidden shadow-2xl shadow-[#0f2044]/20">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#c9a84c] via-[#e3c875] to-transparent" />
 
               <div className="relative z-10">
                 <h3
@@ -130,11 +128,11 @@ export default function Contact() {
 
             {/* Quick contact chips */}
             <div className="flex flex-wrap gap-3">
-              <a href="tel:+492116123456" className="flex items-center gap-2 bg-white rounded-xl px-4 py-3 text-sm font-medium text-[#0f2044] shadow-sm border border-gray-100 hover:border-[#c9a84c]/30 transition-all">
+              <a href="tel:+492116123456" className="flex items-center gap-2 bg-white/90 rounded-xl px-4 py-3 text-sm font-medium text-[#0f2044] shadow-sm border border-[#c9a84c]/18 hover:border-[#c9a84c]/35 transition-all">
                 <Phone className="w-4 h-4 text-[#c9a84c]" />
                 Direkt anrufen
               </a>
-              <a href="mailto:beratung@alphaschutz.de" className="flex items-center gap-2 bg-white rounded-xl px-4 py-3 text-sm font-medium text-[#0f2044] shadow-sm border border-gray-100 hover:border-[#c9a84c]/30 transition-all">
+              <a href="mailto:beratung@alphaschutz.de" className="flex items-center gap-2 bg-white/90 rounded-xl px-4 py-3 text-sm font-medium text-[#0f2044] shadow-sm border border-[#c9a84c]/18 hover:border-[#c9a84c]/35 transition-all">
                 <Mail className="w-4 h-4 text-[#c9a84c]" />
                 E-Mail schreiben
               </a>
@@ -142,7 +140,7 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
+          <div className="bg-white/90 rounded-xl p-8 md:p-10 luxury-card">
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-16 text-center">
                 <div className="w-20 h-20 rounded-full bg-green-50 flex items-center justify-center mb-6">

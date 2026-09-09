@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
 const advantages = [
@@ -14,18 +13,22 @@ export default function About() {
     <section id="ueber-uns" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image Column */}
+          {/* Video Column */}
           <div className="relative order-2 lg:order-1">
-            {/* Main Image */}
+            {/* Main Video */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
-              <Image
-                src="/about-office-team-v3.png"
-                alt="Besprechung im Büro mit mehreren Fachpersonen in Anzügen"
-                fill
-                sizes="(min-width: 1024px) 42vw, 100vw"
-                className="object-cover"
-                quality={95}
-              />
+              <video
+                className="h-full w-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/about-meeting-real-poster.jpg"
+                aria-hidden="true"
+              >
+                <source src="/about-meeting-real-loop.mp4" type="video/mp4" />
+              </video>
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#0f2044]/40 to-transparent" />
             </div>
@@ -57,7 +60,7 @@ export default function About() {
 
           {/* Text Column */}
           <div className="order-1 lg:order-2">
-            <span className="text-[#c9a84c] text-sm font-semibold uppercase tracking-widest block mb-3">
+            <span className="luxury-eyebrow text-sm font-semibold uppercase block mb-3">
               Über uns
             </span>
             <div className="w-12 h-0.5 bg-[#c9a84c] mb-6" />

@@ -30,16 +30,13 @@ const stats = [
 export default function Stats() {
   return (
     <section className="py-20 bg-[#0f2044] relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#c9a84c] -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#c9a84c] translate-y-1/2 -translate-x-1/2" />
-      </div>
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#c9a84c]/60 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#c9a84c]/35 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-[#c9a84c] text-sm font-semibold uppercase tracking-widest block mb-3">
+          <span className="luxury-eyebrow text-sm font-semibold uppercase block mb-3">
             Zahlen & Fakten
           </span>
           <h2
@@ -57,7 +54,7 @@ export default function Stats() {
             return (
               <div
                 key={stat.label}
-                className="bg-white/6 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 transition-all group"
+                className="bg-white/7 backdrop-blur-sm border border-[#c9a84c]/18 rounded-xl p-8 text-center hover:bg-white/11 transition-all group"
               >
                 <div className="w-12 h-12 rounded-xl bg-[#c9a84c]/15 flex items-center justify-center mx-auto mb-5 group-hover:bg-[#c9a84c]/25 transition-colors">
                   <Icon className="w-6 h-6 text-[#c9a84c]" />
