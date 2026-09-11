@@ -14,7 +14,7 @@ export default function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex-1 sm:flex-none w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 py-8 sm:min-h-screen sm:pt-32 sm:pb-16 flex flex-col items-center justify-center text-center">
+      <div className="relative z-10 flex-1 sm:flex-none w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 pt-4 pb-16 sm:min-h-screen sm:pt-32 sm:pb-16 flex flex-col items-center justify-center text-center">
         {/* Kicker */}
         <span className="text-[#c9a84c] text-xs sm:text-sm font-semibold tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-6">
           Seit 1998 · Unabhängige Beratung
