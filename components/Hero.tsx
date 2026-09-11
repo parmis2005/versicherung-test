@@ -3,18 +3,18 @@ import HeroVideo from "@/components/HeroVideo";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden">
-      {/* Background video */}
-      <div className="absolute inset-0">
+    <section className="relative min-h-screen overflow-hidden bg-[#0f2044] flex flex-col sm:block">
+      {/* Video: full, uncropped frame on mobile; full-bleed cover background from sm up */}
+      <div className="relative w-full aspect-video shrink-0 mt-14 sm:mt-0 sm:absolute sm:inset-0 sm:aspect-auto">
         <HeroVideo />
-        {/* Readability overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0f2044]/82 via-[#0f2044]/58 to-[#091428]/78" />
-        {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0f2044] to-transparent" />
+        {/* Readability overlay (desktop) / transition fade into content (mobile) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0f2044] via-transparent to-transparent sm:bg-gradient-to-br sm:from-[#0f2044]/82 sm:via-[#0f2044]/58 sm:to-[#091428]/78" />
+        {/* Bottom fade (desktop only) */}
+        <div className="hidden sm:block absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0f2044] to-transparent" />
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 min-h-screen w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 pt-32 pb-16 flex flex-col items-center justify-center text-center">
+      <div className="relative z-10 flex-1 sm:flex-none w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-10 py-8 sm:min-h-screen sm:pt-32 sm:pb-16 flex flex-col items-center justify-center text-center">
         {/* Kicker */}
         <span className="text-[#c9a84c] text-xs sm:text-sm font-semibold tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-3 sm:mb-6">
           Seit 1998 · Unabhängige Beratung
