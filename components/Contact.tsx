@@ -137,6 +137,46 @@ export default function Contact() {
                 E-Mail schreiben
               </a>
             </div>
+
+            {/* Fake map preview */}
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=K%C3%B6nigsallee+92%2C+40212+D%C3%BCsseldorf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative mt-6 block h-40 rounded-xl overflow-hidden border border-[#c9a84c]/18 shadow-sm hover:border-[#c9a84c]/40 transition-colors"
+            >
+              <div
+                className="absolute inset-0"
+                style={{
+                  backgroundColor: "#e9f1e6",
+                  backgroundImage:
+                    "linear-gradient(120deg, rgba(147,197,253,0.55) 0%, rgba(147,197,253,0.55) 20%, transparent 20%), " +
+                    "linear-gradient(0deg, rgba(255,255,255,0.85) 0px, rgba(255,255,255,0.85) 5px, transparent 5px), " +
+                    "linear-gradient(90deg, rgba(255,255,255,0.85) 0px, rgba(255,255,255,0.85) 5px, transparent 5px), " +
+                    "linear-gradient(45deg, rgba(255,255,255,0.6) 0px, rgba(255,255,255,0.6) 3px, transparent 3px)",
+                  backgroundSize: "100% 100%, 44px 44px, 58px 58px, 84px 84px",
+                }}
+              />
+              <div className="absolute bottom-0 right-0 w-24 h-16 bg-[#bfe3b4]/70 rounded-tl-2xl" />
+
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="flex flex-col items-center -translate-y-2 transition-transform group-hover:-translate-y-3">
+                  <div className="w-9 h-9 rounded-full bg-[#c9a84c] shadow-lg flex items-center justify-center ring-4 ring-white">
+                    <MapPin className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="w-2 h-2 bg-[#c9a84c] rotate-45 -mt-1" />
+                </div>
+              </div>
+
+              <div className="absolute bottom-2 left-2 right-2 bg-white/95 rounded-lg px-3 py-2 shadow-sm flex items-center justify-between gap-2">
+                <p className="text-[#0f2044] text-xs font-medium leading-tight">
+                  Königsallee 92, 40212 Düsseldorf
+                </p>
+                <span className="text-[#c9a84c] text-xs font-semibold whitespace-nowrap group-hover:underline">
+                  Route →
+                </span>
+              </div>
+            </a>
           </div>
 
           {/* Form */}
