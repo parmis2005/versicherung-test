@@ -14,7 +14,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Video Column */}
-          <div className="relative order-2 lg:order-1">
+          <div className="relative order-2 lg:order-1 min-w-0">
             {/* Main Video */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
               <video
@@ -59,7 +59,7 @@ export default function About() {
           </div>
 
           {/* Text Column */}
-          <div className="order-1 lg:order-2">
+          <div className="order-1 lg:order-2 min-w-0">
             <span className="luxury-eyebrow text-sm font-semibold uppercase block mb-3">
               Über uns
             </span>
